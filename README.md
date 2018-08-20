@@ -1,5 +1,4 @@
-ing Imaging Cherenkov Detector Simulation code breakdown
-
+# Ring Imaging Cherenkov Detector Simulation code breakdown
 This code is meant to simulate the processes involved in the detection of light emitted by aerogel by a multi-anode **PMT**. The code works by:
 
  - Simulating a beam of particles (momentum, position, and the angle of the beam can be adjusted) 
