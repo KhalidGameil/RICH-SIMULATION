@@ -1,0 +1,4 @@
+#This file is to program the effects of the crosstalk of the multianode pmt
+#The numbers are in percent
+neighbor 1 
+diagonal .1

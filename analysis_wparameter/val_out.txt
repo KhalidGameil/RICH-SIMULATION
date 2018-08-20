@@ -1,0 +1,225 @@
+==12372== Memcheck, a memory error detector
+==12372== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==12372== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==12372== Command: ./final.out job_0.998421_0.101547_0.103063_0.013793_0.649985.txt 1 test_single_pixel
+==12372== Parent PID: 27056
+==12372== 
+==12372== Use of uninitialised value of size 8
+==12372==    at 0x9C9F97A: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9CA01C0: InterpolateLikelihood::interpolationSwitch(std::vector<double, std::allocator<double> >, int, std::vector<bool, std::allocator<bool> >, double, double, double, double, double, double) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x423133: main (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/analysis_wparameter/final.out)
+==12372==  Uninitialised value was created by a stack allocation
+==12372==    at 0x31D3414C55: _dl_runtime_resolve (in /lib64/ld-2.12.so)
+==12372== 
+==12372== Use of uninitialised value of size 8
+==12372==    at 0x9C9F9C2: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9CA01C0: InterpolateLikelihood::interpolationSwitch(std::vector<double, std::allocator<double> >, int, std::vector<bool, std::allocator<bool> >, double, double, double, double, double, double) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x423133: main (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/analysis_wparameter/final.out)
+==12372==  Uninitialised value was created by a stack allocation
+==12372==    at 0x31D3414C55: _dl_runtime_resolve (in /lib64/ld-2.12.so)
+==12372== 
+==12372== Use of uninitialised value of size 8
+==12372==    at 0x9C9FA0C: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9CA01C0: InterpolateLikelihood::interpolationSwitch(std::vector<double, std::allocator<double> >, int, std::vector<bool, std::allocator<bool> >, double, double, double, double, double, double) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x423133: main (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/analysis_wparameter/final.out)
+==12372==  Uninitialised value was created by a stack allocation
+==12372==    at 0x31D3414C55: _dl_runtime_resolve (in /lib64/ld-2.12.so)
+==12372== 
+==12372== Use of uninitialised value of size 8
+==12372==    at 0x9C9FA56: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9CA01C0: InterpolateLikelihood::interpolationSwitch(std::vector<double, std::allocator<double> >, int, std::vector<bool, std::allocator<bool> >, double, double, double, double, double, double) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x423133: main (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/analysis_wparameter/final.out)
+==12372==  Uninitialised value was created by a stack allocation
+==12372==    at 0x31D3414C55: _dl_runtime_resolve (in /lib64/ld-2.12.so)
+==12372== 
+==12372== Use of uninitialised value of size 8
+==12372==    at 0x9C9FAA0: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9CA01C0: InterpolateLikelihood::interpolationSwitch(std::vector<double, std::allocator<double> >, int, std::vector<bool, std::allocator<bool> >, double, double, double, double, double, double) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x423133: main (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/analysis_wparameter/final.out)
+==12372==  Uninitialised value was created by a stack allocation
+==12372==    at 0x31D3414C55: _dl_runtime_resolve (in /lib64/ld-2.12.so)
+==12372== 
+==12372== 
+==12372== HEAP SUMMARY:
+==12372==     in use at exit: 4,991,561 bytes in 58,411 blocks
+==12372==   total heap usage: 947,863,376 allocs, 947,804,965 frees, 64,452,230,732 bytes allocated
+==12372== 
+==12372== 25 bytes in 1 blocks are possibly lost in loss record 14,124 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0xA3E00DA: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (basic_string.tcc:923)
+==12372==    by 0xA3E06FD: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:1128)
+==12372==    by 0x729A0FF: TFitResultPtr HFit::Fit<TGraph>(TGraph*, TF1*, Foption_t&, ROOT::Math::MinimizerOptions const&, char const*, ROOT::Fit::DataRange&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72907A9: ROOT::Fit::FitObject(TGraph*, TF1*, Foption_t&, ROOT::Math::MinimizerOptions const&, char const*, ROOT::Fit::DataRange&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72F837D: TGraph::Fit(TF1*, char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72F73BC: TGraph::Fit(char const*, char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x9C9E5DE: InterpolateLikelihood::getPolynomialFit(std::vector<int, std::allocator<int> >, std::vector<double, std::allocator<double> >, std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9C9EE1C: InterpolateLikelihood::getPolynomialValuesAlongAxis(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >, std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9C9F784: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9CA01C0: InterpolateLikelihood::interpolationSwitch(std::vector<double, std::allocator<double> >, int, std::vector<bool, std::allocator<bool> >, double, double, double, double, double, double) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372== 
+==12372== 31 bytes in 1 blocks are possibly lost in loss record 14,278 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0xA3E00DA: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (basic_string.tcc:923)
+==12372==    by 0xA3E06FD: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:1128)
+==12372==    by 0x57EFDDB: TClassRef::Assign(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57D01A6: TBaseClass::GetClassPointer(bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57DEB46: TClass::GetBaseClass(char const*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x72DD666: TFormula::Compile(char const*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72DE480: TFormula::TFormula(char const*, char const*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72BA23E: TF1::TF1(char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72BA5E6: TF1::InitStandardFunctions() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x7554A68: G__G__Hist_110_0_63(G__value*, char const*, G__param*, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372== 
+==12372== 31 bytes in 1 blocks are possibly lost in loss record 14,279 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0xA3E00DA: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (basic_string.tcc:923)
+==12372==    by 0xA3E06FD: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:1128)
+==12372==    by 0x7291B27: ROOT::Fit::FitConfig::SetMinimizer(char const*, char const*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x729A0FF: TFitResultPtr HFit::Fit<TGraph>(TGraph*, TF1*, Foption_t&, ROOT::Math::MinimizerOptions const&, char const*, ROOT::Fit::DataRange&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72907A9: ROOT::Fit::FitObject(TGraph*, TF1*, Foption_t&, ROOT::Math::MinimizerOptions const&, char const*, ROOT::Fit::DataRange&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72F837D: TGraph::Fit(TF1*, char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72F73BC: TGraph::Fit(char const*, char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x9C9E5DE: InterpolateLikelihood::getPolynomialFit(std::vector<int, std::allocator<int> >, std::vector<double, std::allocator<double> >, std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9C9EE1C: InterpolateLikelihood::getPolynomialValuesAlongAxis(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >, std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9C9F784: InterpolateLikelihood::interpolateMeansLinearlyWithPolynomialApproximation(std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372== 
+==12372== 32 bytes in 1 blocks are possibly lost in loss record 17,657 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x57E6B05: TClass::AddClass(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E727A: TClass::Init(char const*, short, std::type_info const*, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E80B2: TClass::TClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8277: ROOT::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x502491B: ROOT::TDefaultInitBehavior::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libGui.so.5.34)
+==12372==    by 0x57F4B50: ROOT::TGenericClassInfo::GetClass() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x5945902: TNamed::Dictionary() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x5781305: TROOT::LoadClass(char const*, bool) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372== 
+==12372== 33 bytes in 1 blocks are possibly lost in loss record 17,696 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x57E6B05: TClass::AddClass(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E727A: TClass::Init(char const*, short, std::type_info const*, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E80B2: TClass::TClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8277: ROOT::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x502491B: ROOT::TDefaultInitBehavior::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libGui.so.5.34)
+==12372==    by 0x57F4B50: ROOT::TGenericClassInfo::GetClass() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x5945946: TObject::Class() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E1EF4: TClass::Property() const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372== 
+==12372== 34 bytes in 1 blocks are possibly lost in loss record 17,707 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x57E6B05: TClass::AddClass(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E727A: TClass::Init(char const*, short, std::type_info const*, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E80B2: TClass::TClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8277: ROOT::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x502491B: ROOT::TDefaultInitBehavior::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libGui.so.5.34)
+==12372==    by 0x57F4B50: ROOT::TGenericClassInfo::GetClass() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x73C0846: TFormula::Class() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72DD657: TFormula::Compile(char const*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372== 
+==12372== 37 bytes in 1 blocks are possibly lost in loss record 17,720 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x57E6B05: TClass::AddClass(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E727A: TClass::Init(char const*, short, std::type_info const*, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E80B2: TClass::TClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8277: ROOT::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x502491B: ROOT::TDefaultInitBehavior::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libGui.so.5.34)
+==12372==    by 0x57F4B50: ROOT::TGenericClassInfo::GetClass() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x5945046: TObjString::Class() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57692D9: TObjString::Compare(TObject const*) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372== 
+==12372== 40 bytes in 10 blocks are definitely lost in loss record 20,489 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0x72BA8E0: TF1::InitStandardFunctions() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x7554A68: G__G__Hist_110_0_63(G__value*, char const*, G__param*, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x5FEBB88: Cint::G__ExceptionWrapper(int (*)(G__value*, char const*, G__param*, int), G__value*, char*, G__param*, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x608FE60: G__execute_call (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x6090CC1: G__call_cppfunc (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x606CF87: G__interpret_func (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x605ACDB: G__getfunction (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x60387DD: G__getitem (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x603D357: G__getexpr (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x60BC916: G__exec_statement (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372==    by 0x6024DB0: G__exec_tempfile_core (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCint.so.5.34)
+==12372== 
+==12372== 43 bytes in 1 blocks are possibly lost in loss record 20,496 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x57E6B05: TClass::AddClass(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E727A: TClass::Init(char const*, short, std::type_info const*, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E80B2: TClass::TClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8277: ROOT::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x502491B: ROOT::TDefaultInitBehavior::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libGui.so.5.34)
+==12372==    by 0x57F4B50: ROOT::TGenericClassInfo::GetClass() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x9A15D62: TLinearMinimizer::Dictionary() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libMinuit.so.5.34)
+==12372==    by 0x5781305: TROOT::LoadClass(char const*, bool) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372== 
+==12372== 47 bytes in 1 blocks are possibly lost in loss record 20,509 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x57E6B05: TClass::AddClass(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E727A: TClass::Init(char const*, short, std::type_info const*, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E80B2: TClass::TClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8277: ROOT::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x502491B: ROOT::TDefaultInitBehavior::CreateClass(char const*, short, std::type_info const&, TVirtualIsAProxy*, void (*)(void*, TMemberInspector&), char const*, char const*, int, int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libGui.so.5.34)
+==12372==    by 0x57F4B50: ROOT::TGenericClassInfo::GetClass() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x5781305: TROOT::LoadClass(char const*, bool) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E8B54: TClass::GetClass(char const*, bool, bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372== 
+==12372== 78 bytes in 2 blocks are possibly lost in loss record 22,196 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0xA3E00DA: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (basic_string.tcc:923)
+==12372==    by 0xA3E06FD: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:1128)
+==12372==    by 0x57EFDDB: TClassRef::Assign(TClass*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57D01A6: TBaseClass::GetClassPointer(bool) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57DEA90: TClass::GetBaseClass(TClass const*) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E42F8: TClass::InheritsFrom(TClass const*) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E1EFD: TClass::Property() const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57DE0C8: TClass::IsForeign() const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x57E570F: TClass::PostLoadCheck() (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0x578132F: TROOT::LoadClass(char const*, bool) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372== 
+==12372== 81 bytes in 3 blocks are possibly lost in loss record 22,267 of 31,039
+==12372==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12372==    by 0xA3DFE08: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (new_allocator.h:104)
+==12372==    by 0x5836264: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libCore.so.5.34)
+==12372==    by 0xA3E1B55: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (basic_string.h:4139)
+==12372==    by 0x73B31B6: ROOT::Math::WrappedMultiTF1::ParameterName(unsigned int) const (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x9380695: ROOT::Fit::FitConfig::CreateParamsSettings(ROOT::Math::IParametricFunctionMultiDim const&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libMathCore.so.5.34)
+==12372==    by 0x72992E1: TFitResultPtr HFit::Fit<TGraph>(TGraph*, TF1*, Foption_t&, ROOT::Math::MinimizerOptions const&, char const*, ROOT::Fit::DataRange&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72907A9: ROOT::Fit::FitObject(TGraph*, TF1*, Foption_t&, ROOT::Math::MinimizerOptions const&, char const*, ROOT::Fit::DataRange&) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72F837D: TGraph::Fit(TF1*, char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x72F73BC: TGraph::Fit(char const*, char const*, char const*, double, double) (in /neut/datasrv1/trt2kmgr/tools/v1r55/ROOT/v5r34p09n04/Linux-x86_64/lib/root/libHist.so.5.34)
+==12372==    by 0x9C9E5DE: InterpolateLikelihood::getPolynomialFit(std::vector<int, std::allocator<int> >, std::vector<double, std::allocator<double> >, std::vector<int, std::allocator<int> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372==    by 0x9C9EE1C: InterpolateLikelihood::getPolynomialValuesAlongAxis(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >, std::vector<double, std::allocator<double> >, std::vector<bool, std::allocator<bool> >) (in /home/kgameil/cherenkov_PID_library/cherenkov_particle_id_detector_library/MeanGenerationCode/libPID.so)
+==12372== 
+==12372== LEAK SUMMARY:
+==12372==    definitely lost: 40 bytes in 10 blocks
+==12372==    indirectly lost: 0 bytes in 0 blocks
+==12372==      possibly lost: 472 bytes in 14 blocks
+==12372==    still reachable: 4,991,049 bytes in 58,387 blocks
+==12372==         suppressed: 0 bytes in 0 blocks
+==12372== Reachable blocks (those to which a pointer was found) are not shown.
+==12372== To see them, rerun with: --leak-check=full --show-reachable=yes
+==12372== 
+==12372== For counts of detected and suppressed errors, rerun with: -v
+==12372== ERROR SUMMARY: 257 errors from 17 contexts (suppressed: 8 from 6)

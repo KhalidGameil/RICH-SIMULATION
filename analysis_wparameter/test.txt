@@ -1,0 +1,276 @@
+TEST
+MeanInterpolationDataBank_10Juluy2017_p1024.txt
+1
+34    5    5     30     30      1024
+Completed Reading datafile
+0   0.00314721    0.00301375
+0.125111   7.44021e-05    7.5193e-05
+0.250222   3.4895e-05    3.49098e-05
+0.375333   2.1785e-05    2.16629e-05
+0.500444   1.52798e-05    1.51557e-05
+0.625556   1.14151e-05    1.13233e-05
+0.750667   8.87048e-06    8.81734e-06
+0.875778   7.0933e-06    7.06325e-06
+1.00089   5.759e-06    5.77545e-06
+1.126   4.76283e-06    4.79616e-06
+BETA:inf
+PHI:inf
+THETA inf
+x: 0.098
+y: 0.098
+theta: 0.3
+phi: 0.6
+beta: 5000
+TEST TO SEE IF ANYTHING WORKS
+x: 0.098    y: 0.098    pionP: 5000     pionB: 0.999623     theta: 0.3    phi: 0.6    
+0   **********
+ **    1 **SET STR           0
+ **********
+ NOW USING STRATEGY  0: MINIMIZE THE NUMBER OF CALLS TO FUNCTION
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 x            9.80000e-02  1.00000e-02     no limits
+     2 y            9.80000e-02  1.00000e-02     no limits
+     3 t            3.00000e-01  1.00000e-02     no limits
+     4 p            6.00000e-01  1.00000e-02     no limits
+     5 bm           9.99623e-01  1.00000e-02    9.88142e-01  9.99920e-01
+ MINUIT WARNING IN PARAMETR
+ ============== VARIABLE5 BROUGHT BACK INSIDE LIMITS.
+     6 errX         5.00000e-07  constant
+     7 errY         5.00000e-07  constant
+     8 errT         5.00000e-04  constant
+     9 errP         7.00000e-07  constant
+    10 errBM        9.78782e-05  constant
+ **********
+ **    2 **FIX           6
+ **********
+ PARAMETER    6  IS CONSTANT.   IGNORED.
+ **********
+ **    3 **FIX           7
+ **********
+ PARAMETER    7  IS CONSTANT.   IGNORED.
+ **********
+ **    4 **FIX           8
+ **********
+ PARAMETER    8  IS CONSTANT.   IGNORED.
+ **********
+ **    5 **FIX           9
+ **********
+ PARAMETER    9  IS CONSTANT.   IGNORED.
+ **********
+ **    6 **FIX          10
+ **********
+ PARAMETER   10  IS CONSTANT.   IGNORED.
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+    11 sig          3.15000e-03  constant
+ **********
+ **    7 **FIX          11
+ **********
+ PARAMETER   11  IS CONSTANT.   IGNORED.
+ **********
+ **    8 **MIGRAD         500
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  0.  CONVERGENCE WHEN EDM .LT. 1.00e-04
+ FCN=44.0485 FROM MIGRAD    STATUS=INITIATE       20 CALLS          21 TOTAL
+                     EDM= unknown      STRATEGY= 0      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  x            9.80000e-02   1.00000e-02   1.00000e-02   2.43641e+03
+   2  y            9.80000e-02   1.00000e-02   1.00000e-02   3.11756e+03
+   3  t            3.00000e-01   1.00000e-02   1.00000e-02   4.75723e+02
+   4  p            6.00000e-01   1.00000e-02   1.00000e-02   4.80274e+01
+   5  bm           9.99623e-01   1.00000e-02   1.20732e+00  -3.16081e+00
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=44.0276 FROM MIGRAD    STATUS=CONVERGED      37 CALLS          38 TOTAL
+                     EDM=4.7085e-06    STRATEGY= 0      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  x            9.80000e-02   1.00000e-02  -3.04551e-10  -2.39282e+01
+   2  y            9.80000e-02   1.00000e-02  -3.89694e-10  -2.25215e+01
+   3  t            2.99941e-01   1.00000e-02  -5.93346e-05  -1.45952e+00
+   4  p            6.00000e-01   1.00000e-02  -1.17667e-11   6.57980e-02
+   5  bm           9.99631e-01   1.00000e-02   4.30086e-03  -3.91770e-02
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+NO ERROR MATRIX       
+ **********
+ **    9 **HESSE         500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=44.0276 FROM HESSE     STATUS=OK             21 CALLS          59 TOTAL
+                     EDM=2.44477e-06    STRATEGY= 0      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  x            9.80000e-02   5.00000e-07   1.00000e-07   9.80000e-02
+   2  y            9.80000e-02   5.00000e-07   1.00000e-07   9.80000e-02
+   3  t            2.99941e-01   4.99462e-04   1.63645e-06   2.99941e-01
+   4  p            6.00000e-01   7.00000e-07   2.86102e-07   6.00000e-01
+   5  bm           9.99631e-01   9.68600e-05   1.70924e-04   1.25633e+00
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  5    ERR DEF=1
+  2.500e-13  3.412e-20 -5.775e-15  4.957e-21  1.886e-15 
+  3.412e-20  2.500e-13 -5.558e-15 -7.870e-21  1.736e-15 
+ -5.775e-15 -5.558e-15  2.495e-07 -1.597e-17  2.171e-10 
+  4.957e-21 -7.870e-21 -1.597e-17  4.900e-13 -2.310e-17 
+  1.886e-15  1.736e-15  2.171e-10 -2.310e-17  9.391e-09 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5
+        1  0.00005   1.000  0.000 -0.000  0.000  0.000
+        2  0.00004   0.000  1.000 -0.000 -0.000  0.000
+        3  0.00449  -0.000 -0.000  1.000 -0.000  0.004
+        4  0.00000   0.000 -0.000 -0.000  1.000 -0.000
+        5  0.00449   0.000  0.000  0.004 -0.000  1.000
+ **********
+ **   10 **SCAN           5          90      0.9992      0.9999
+ **********
+1SCAN OF PARAMETER NO. 5,  bm
+ FCN=44.0276 FROM SCAn        STATUS= NO CHANGE     90 CALLS         149 TOTAL
+                     EDM=2.44477e-06    STRATEGY= 0      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  x            9.80000e-02   5.00000e-07   1.00000e-07  -2.39282e+01
+   2  y            9.80000e-02   5.00000e-07   1.00000e-07  -2.25215e+01
+   3  t            2.99941e-01   4.99462e-04   1.63645e-06  -1.45952e+00
+   4  p            6.00000e-01   7.00000e-07   2.86102e-07   6.57980e-02
+   5  bm           9.99631e-01   9.68600e-05   1.70924e-04  -3.91770e-02
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+DT: 0.299941+/-0.000499462   DB: 0.999631+/-9.686e-05   LL: 44.0276   WM: 0   WH: 0   WS: 0    SM: 0   SH: 3   SS: 0    TIME: 707.65
+1   **********
+ **   11 **SET STR           0
+ **********
+ NOW USING STRATEGY  0: MINIMIZE THE NUMBER OF CALLS TO FUNCTION
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 x            9.80000e-02  1.00000e-02     no limits
+     2 y            9.80000e-02  1.00000e-02     no limits
+     3 t            3.00000e-01  1.00000e-02     no limits
+     4 p            6.00000e-01  1.00000e-02     no limits
+     5 bm           9.99623e-01  1.00000e-02    9.88142e-01  9.99920e-01
+ MINUIT WARNING IN PARAMETR
+ ============== VARIABLE5 BROUGHT BACK INSIDE LIMITS.
+     6 errX         5.00000e-07  constant
+     7 errY         5.00000e-07  constant
+     8 errT         5.00000e-04  constant
+     9 errP         7.00000e-07  constant
+    10 errBM        9.78782e-05  constant
+ **********
+ **   12 **FIX           6
+ **********
+ PARAMETER    6  IS CONSTANT.   IGNORED.
+ **********
+ **   13 **FIX           7
+ **********
+ PARAMETER    7  IS CONSTANT.   IGNORED.
+ **********
+ **   14 **FIX           8
+ **********
+ PARAMETER    8  IS CONSTANT.   IGNORED.
+ **********
+ **   15 **FIX           9
+ **********
+ PARAMETER    9  IS CONSTANT.   IGNORED.
+ **********
+ **   16 **FIX          10
+ **********
+ PARAMETER   10  IS CONSTANT.   IGNORED.
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+    11 sig          3.15000e-03  constant
+ **********
+ **   17 **FIX          11
+ **********
+ PARAMETER   11  IS CONSTANT.   IGNORED.
+ **********
+ **   18 **MIGRAD         500
+ **********
+ FIRST CALL TO USER FUNCTION AT NEW START POINT, WITH IFLAG=4.
+ START MIGRAD MINIMIZATION.  STRATEGY  0.  CONVERGENCE WHEN EDM .LT. 1.00e-04
+ FCN=47.4632 FROM MIGRAD    STATUS=INITIATE       20 CALLS         170 TOTAL
+                     EDM= unknown      STRATEGY= 0      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  x            9.80000e-02   1.00000e-02   1.00000e-02  -9.60956e+02
+   2  y            9.80000e-02   1.00000e-02   1.00000e-02   2.83537e+02
+   3  t            3.00000e-01   1.00000e-02   1.00000e-02  -5.23912e+01
+   4  p            6.00000e-01   1.00000e-02   1.00000e-02   7.38477e+01
+   5  bm           9.99623e-01   1.00000e-02   1.20732e+00   2.52906e+00
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+ MIGRAD MINIMIZATION HAS CONVERGED.
+ FCN=47.4586 FROM MIGRAD    STATUS=CONVERGED      37 CALLS         187 TOTAL
+                     EDM=4.30176e-06    STRATEGY= 0      NO ERROR MATRIX       
+  EXT PARAMETER               CURRENT GUESS       STEP         FIRST   
+  NO.   NAME      VALUE            ERROR          SIZE      DERIVATIVE 
+   1  x            9.80000e-02   1.00000e-02   1.20119e-10   3.37071e+00
+   2  y            9.80000e-02   1.00000e-02  -3.54421e-11  -5.45216e+00
+   3  t            3.00007e-01   1.00000e-02   6.53917e-06  -1.70710e-01
+   4  p            6.00000e-01   1.00000e-02  -1.80927e-11  -7.80428e-02
+   5  bm           9.99617e-01   1.00000e-02  -3.51978e-03  -3.92791e-02
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+NO ERROR MATRIX       
+ **********
+ **   19 **HESSE         500
+ **********
+ COVARIANCE MATRIX CALCULATED SUCCESSFULLY
+ FCN=47.4586 FROM HESSE     STATUS=OK             21 CALLS         208 TOTAL
+                     EDM=2.08296e-06    STRATEGY= 0      ERROR MATRIX ACCURATE 
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME      VALUE            ERROR       STEP SIZE       VALUE   
+   1  x            9.80000e-02   5.00000e-07   1.00000e-07   9.80000e-02
+   2  y            9.80000e-02   5.00000e-07   1.00000e-07   9.80000e-02
+   3  t            3.00007e-01   4.99627e-04   1.69825e-06   3.00007e-01
+   4  p            6.00000e-01   7.00000e-07   2.86102e-07   6.00000e-01
+   5  bm           9.99617e-01   9.67965e-05   1.79328e-04   1.24851e+00
+   6  errX         5.00000e-07   constant   
+   7  errY         5.00000e-07   constant   
+   8  errT         5.00000e-04   constant   
+   9  errP         7.00000e-07   constant   
+  10  errBM        9.78782e-05   constant   
+  11  sig          3.15000e-03   constant   
+ EXTERNAL ERROR MATRIX.    NDIM=  25    NPAR=  5    ERR DEF=1
+  2.500e-13  2.298e-20 -4.731e-15  3.867e-21  4.309e-16 
+  2.298e-20  2.500e-13 -3.448e-15 -6.735e-21 -1.105e-15 
+ -4.731e-15 -3.448e-15  2.496e-07 -1.274e-16 -3.044e-11 
+  3.867e-21 -6.735e-21 -1.274e-16  4.900e-13 -3.247e-17 
+  4.309e-16 -1.105e-15 -3.044e-11 -3.247e-17  9.378e-09 
+ PARAMETER  CORRELATION COEFFICIENTS  
+       NO.  GLOBAL      1      2      3      4      5
+        1  0.00002   1.000  0.000 -0.000  0.000  0.000
+        2  0.00003   0.000  1.000 -0.000 -0.000 -0.000
+        3  0.00063  -0.000 -0.000  1.000 -0.000 -0.001
+        4  0.00000   0.000 -0.000 -0.000  1.000 -0.000
+        5  0.00063   0.000 -0.000 -0.001 -0.000  1.000
+ **********
+ **   20 **SCAN           5          90      0.9992      0.9999
+ **********
