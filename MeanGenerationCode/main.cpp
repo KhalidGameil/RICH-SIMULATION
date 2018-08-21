@@ -1483,7 +1483,7 @@ int main(int argc, char *argv[]) {
 
 
 	std::cout << "Arg 1: Job File" << std::endl;
-	std::cout << "Default: Beta:1000, Theta:0, Phi:0, beamX:0.097m, beamY:0.097m, beamZ:0.00m"
+	std::cout << "Default: Beta:1000, Theta:0, Phi:0, beamX:0.097m, beamY:0.097m, beamZ:0.00m" << std::endl;
 	std::cout << "Arg 2: Save Path" << std::endl;
 	std::cout << "Default: $PWD" << std::endl;
 

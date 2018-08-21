@@ -49,7 +49,7 @@
 #include "detectedEventClass.h"
 #include "detectorClass.h"
 #include "directionClass.h"
-#include "interpolatorClass.h"
+#include "interpolateLikelihoodClass.h"
 #include "pmtClass.h"
 #include "positionClass.h"
 #include "randomEventClass.h"
