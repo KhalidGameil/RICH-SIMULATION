@@ -1328,7 +1328,7 @@ void setVariablesFromJobFiles(std::string fileName,
 		std::vector<double> *thetaVariables,
 		std::vector<double> *phiVariables,
 		std::vector<double> *betaMomentumVariables) {
-	// std::cout << fileName << std::endl;
+
 	std::ifstream infile(fileName.c_str());
 	if (infile.is_open()) {
 		std::cout << "TEST" << std::endl;
@@ -1480,12 +1480,13 @@ getLimitVariables(double beta, double x, double y, double t, double p,
 }
 
 int main(int argc, char *argv[]) {
-	// std::cout << "TEST!!!!" << std::endl;
-	// std::cout << argc << std::endl;
-	//std::clock_t begin = std::clock();
 
-	// ProfilerStart("/home/mohammad/gperf/dump.txt");
-	// Position
+
+	std::cout << "Arg 1: Job File" << std::endl;
+	std::cout << "Default: Beta:1000, Theta:0, Phi:0, beamX:0.097m, beamY:0.097m, beamZ:0.00m"
+	std::cout << "Arg 2: Save Path" << std::endl;
+	std::cout << "Default: $PWD" << std::endl;
+
 	double aeroWidth = .12;     // m
 	double aeroLength = .12;    // m
 	double aeroThickness = .02; // m
@@ -1505,73 +1506,59 @@ int main(int argc, char *argv[]) {
 
 	/*PMT Parameters*/
 	double multiplePMTs = 4; // THIS IS A HACK IDEALLY IT SHOULD BE THAT YOU MAKE
-	// MULTIPLE PMT Objects //#CHANGE=1
+				 // MULTIPLE PMT Objects
 	double pmtWidth = multiplePMTs * 48.5 / 1000;  // m
 	double pmtLength = multiplePMTs * 48.5 / 1000; // m
 	int sidePixelCount = 8;
 	int pixelN = std::pow(multiplePMTs * sidePixelCount, 2);
 	std::shared_ptr<PMT> pmt(std::make_shared<PMT>(pmtWidth, pmtLength, pixelN));
 
-	// Beam Parameters
-	// Momentum
-	// double startP = 5000;  MeV/c
-	// double endP = 5000; Mev/c
-	// double errorOnMomentum =1/100; //1%
-	// int eventCount = 10000;
-
 	std::string path;
 	int eventCount = 100000;
 
 	// Momentum
-	double startMomentum = 5000;//MeV
-	double endMomentum = 11000;//MeV
+	double startMomentum = 1000;//MeV
+	double endMomentum = 10000;//MeV
 	double momentumCount = 1;
 	double stepMomentum = calcStepSize(startMomentum, endMomentum, momentumCount);
-	// std::cout << "Momentum:" << stepMomentum << std::endl;
 
 	// Beta
-	double startBeta = .993; // FORCES TO BE SHOWN
-	double endBeta = 1.999;
+	double startBeta = 0.99999; // FORCES TO BE SHOWN
+	double endBeta = 1.0;
 	double betaCount = 1;
 	double stepBeta = calcStepSize(startBeta, endBeta, betaCount);
 	bool betaBool = true;
-	// std::cout << "BETA:" << stepBeta << std::endl;
 
 	// Phi
-	double startPhi = 0.78;
+	double startPhi = 0;
 	double endPhi = TMath::Pi() / 4; // 2*TMath::Pi()/4;//radians => max = 2*PI
 	double phiCount = 1;
 	double stepPhi = calcStepSize(startPhi, endPhi, phiCount);
-	// std::cout << "PHI:" << stepPhi << std::endl;
+	
 	// Theta
-	double startTheta = 0.4; //-TMath::Pi()/4;//radians
+	double startTheta = 0; //-TMath::Pi()/4;//radians
 	double endTheta = .4;    // TMath::Pi()/4;//radians
 	double thetaCount = 1;
 	double stepTheta = calcStepSize(startTheta, endTheta, thetaCount);
-	// std::cout << "THETA " << stepTheta << std::endl;
+	
 	// Mass
 	double pionMass = 137.2735; // MeV/c^2
 	double kaonMass = 495.665;  // MeV/c^2
 	// Position
-	double beamx = 0.097;               // m //#CHANGE=.06
-	double beamy = 0.097;               // m //#CHANGE=.06
+	double beamx = 0.097;               // center m //#CHANGE=.06
+	double beamy = 0.097;               // center m //#CHANGE=.06
 	double pixelDist = 48.5 / (8000.0); // dimensions of a pixel
-	// std::cout << beamy + pixelDist << std::endl;
-	// std::cout << beamx + pixelDist << std::endl;
+	
 	int beamCountX = 1;
 	int beamCountY = 1;
 	double beamStepX = calcStepSize(beamx, beamx + pixelDist, beamCountX);
 	double beamStepY = calcStepSize(beamy, beamy + pixelDist, beamCountY);
-	double beamz = 0.00; // m //#CHANGE=.00
-
+	double beamz = 0.00; // m
+ 
 	/*Detector Parameters*/
 	std::shared_ptr<Detector> detector(
-			std::make_shared<Detector>(aerogels, pmt, .09)); //.06)); //CHANGE=.09
-
-	// b = beta
-	// t = theta
-	// p = phi
-
+			std::make_shared<Detector>(aerogels, pmt, .09));
+ 
 	double startI = startMomentum;
 	double endI = endMomentum;
 	double stepI = stepMomentum;
@@ -1620,59 +1607,17 @@ int main(int argc, char *argv[]) {
 	if (argc > 1) {
 		std::string filename(argv[1]);
 		std::cout << filename << std::endl;
+		//This file assumes beta ranges from  0.988-0.999 (20) 0.999-1.0 (15)
 		setVariablesFromJobFilesBeta(filename, xVariables, yVariables,
 				thetaVariables, phiVariables,
 				betaMomentumVariables);			
 	}
-
-	std::cout << "TEST" << std::endl;
-	for (int i = 0; i < betaMomentumVariables.size(); i++)
-	{
-		std::cout << betaMomentumVariables[i] << std::endl;
-	}
-	/*
-	   if (argc >3) {
-	   path = std::string(argv[3]);
-	   std::cout << path << std::endl;
-	   }
-	   int loops = 0;
-	   if (argc > 2){
-	   loops = std::atoi(argv[2]);
-	   }
-	   */
+	
 	std::string pathAllfiles;
 	if (argc >2) {
 		pathAllfiles = std::string(argv[2]);
 		std::cout << pathAllfiles<< std::endl;
 	}
-
-
-	/*	std::string jobList;
-		if (argc == 4) {
-		jobList = std::string(argv[3]);
-		}
-
-		std::vector<std::vector<double>> variableLimits;
-		if (!jobList.empty()) {
-		variableLimits = getJobLimits(jobList);
-		}
-
-		std::vector<double> trueLimits = getLimitVariables(
-		betaMomentumVariables.at(0), xVariables.at(1), yVariables.at(1),
-		thetaVariables.at(1), phiVariables.at(1), variableLimits);
-
-		std::cout << trueLimits[0] << "    ";
-		std::cout << trueLimits[1] << "    ";
-		std::cout << trueLimits[2] << "    ";
-		std::cout << trueLimits[3] << "    ";
-		std::cout << trueLimits[4] << std::endl;
-
-		xVariables[0] = trueLimits[1];
-		yVariables[0] = trueLimits[2];
-		betaMomentumVariables[0] = trueLimits[0];
-		thetaVariables[0] = trueLimits[3];
-		phiVariables[0] = trueLimits[4];
-		*/
 
 	int loops = 1;
 	std::vector<std::shared_ptr<Beam>> loopBeam;
