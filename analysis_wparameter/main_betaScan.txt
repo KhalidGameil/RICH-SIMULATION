@@ -1,4 +1,3 @@
-//# CPUPROFILE=./tmp/main.cpp ./main.cpp
 //C++
 #include <ctime>
 #include <fstream>
@@ -13,9 +12,6 @@
 #include <sys/stat.h>
 #include <time.h> /* time */
 #include <vector>
-
-//Boost
-//include "/usr/local/include/boost/algorithm/string.hpp"
 
 //Root
 #include "TApplication.h"
@@ -146,30 +142,6 @@ int main(int argc, char **argv) {
 
 
   while (!completed) {
-    //std::cout << "Input x Value: ";
-    //std::cin >> beamx;
-
-    //std::cout << "Input y Value: ";
-    //std::cin >> beamy;
-
-    //std::cout << "Input theta Value: ";
-    //std::cin >> startTheta;
-
-    //std::cout << "Input phi Value: ";
-    //std::cin >> startPhi;
-
-    //std::string betaAnswer;
-    //std::cout << "Beta [y/n]?:";
-    //std::cin >> betaAnswer;
-    //if (betaAnswer == std::string("y")) {
-    //std::cout << "Input beta Value: ";
-    //std::cin >> startBeta;
-    //betaBool = true;
-    //} else if (betaAnswer == std::string("n")) {
-    //std::cout << "Input momentum Value [MeV]: ";
-    //std::cin >> startMomentum;
-    //betaBool = false;
-    //}
 
     beamx = 0.098;
     beamy = 0.098;
@@ -178,19 +150,9 @@ int main(int argc, char **argv) {
     betaBool = false;
     startMomentum = 5000;
 
-    //std::cout << "Test each Pixel [y/n]?";
-    //std::string eachPixelAnswer;
-    //std::cin >> eachPixelAnswer;
     bool testPixel = false;
-    //if (eachPixelAnswer == std::string("y")) {
-    //testPixel = true;
-    //} else if (eachPixelAnswer == std::string("n")) {
-    //testPixel = false;
-    //}
 
-    //std::cout << "Test Variable [beta/x/y/theta/phi/none]?:";
     std::string variableLikelihoodName = "none";
-    //std::cin >> variableLikelihoodName;
 
     double x = beamx;
     double y = beamy;
@@ -272,14 +234,6 @@ int main(int argc, char **argv) {
     std::clock_t end = std::clock();
     double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
     std::cout << "TIME THE CODE TOOK:" << elapsed_secs << std::endl;
-    //std::string completeAnswer;
-    //std::cout << "Complete [y/n]?:";
-    //std::cin >> completeAnswer;
-    //if (completeAnswer == std::string("y")) {
-      completed = true;
-    //} else if (completeAnswer.c_str() == std::string("n")) {
-   //   completed = false;
-    //}
+
   }
 }
-//}

@@ -32,10 +32,6 @@
 //Geometric Toolbox
 //#include <Mathematics/GteIntpTricubic3.h>
 
-//Boost
-//#include <boost/filesystem.hpp>
-//#include <boost/iostreams/device/mapped_file.hpp> // for mmap
-#include </usr/local/Cellar/boost/1.64.0_1/include/boost/iostreams/device/mapped_file.hpp>
 
 struct measuredBatch {
   double p;
@@ -83,8 +79,6 @@ public:
   ////InterpolateLikelihood(InterpolateLikelihood *);
   InterpolateLikelihood();
   InterpolateLikelihood(std::string);
-  int countLines(boost::iostreams::mapped_file mmap, const char *f);
-  void readDataBaseFileMMapped(std::string);
   void readDataBaseFileFast(std::string);
   //InterpolateLikelihood(std::string,
   //int, int,

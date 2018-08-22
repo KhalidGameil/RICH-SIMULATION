@@ -860,48 +860,6 @@ std::vector<double> getStdDevPerPixel(std::vector<std::shared_ptr<TH1D>> h) {
 	return stdDev;
 }
 
-std::vector<double> uncertaintyTest(std::vector<std::vector<double>> pixelHits1,
-		std::vector<std::vector<double>> pixelHits2,
-		std::vector<double> mean1,
-		std::vector<double> mean2,
-		std::vector<double> stdDev1,
-		std::vector<double> stdDev2,
-		std::shared_ptr<Detector> detector) {
-	int errCount = 100;
-	std::shared_ptr<TRandom3> randomGenerate(std::make_shared<TRandom3>());
-	randomGenerate->SetSeed(0);
-	std::vector<double> rndSep;
-	for (int i = 0; i < errCount; i++) {
-		// loop through means
-		std::vector<double> rndmean1;
-		std::vector<double> rndmean2;
-		for (int j = 0; j < mean1.size(); j++) {
-			rndmean1.push_back((mean1.at(j))); //, stdDev1.at(j)));
-			rndmean2.push_back((mean2.at(j))); //, stdDev2.at(j)));
-			////std::cout << j << "   ";
-			////std::cout << mean1.at(j) << "   ";
-			////std::cout << rndmean1.at(j) << "   ";
-			////std::cout << mean2.at(j) << "   ";
-			////std::cout << rndmean2.at(j) << std::endl;
-		}
-		std::vector<double> ll1 =
-			detector->getLogLikelihood(pixelHits1, rndmean1, rndmean2);
-		std::vector<double> ll2 =
-			detector->getLogLikelihood(pixelHits2, rndmean1, rndmean2);
-		// for (int j = 0; j < ll1.size(); j++)
-		//{
-		////std::cout << j << "   ";
-		////std::cout << ll1.at(j) << "   ";
-		////std::cout << ll2.at(j) << std::endl;
-
-		//}
-		std::shared_ptr<TH1D> ll1Hist = getHistogramOfLL(ll1);
-		std::shared_ptr<TH1D> ll2Hist = getHistogramOfLL(ll2);
-		rndSep.push_back(getSeperationValue(ll1Hist, ll2Hist));
-	}
-	return rndSep;
-}
-
 void plotHistogramSep(std::vector<double> sepTest, std::string title, int p) {
 
 	std::vector<double> sepTest_double(sepTest.begin(),sepTest.end());
@@ -1723,8 +1681,5 @@ int main(int argc, char *argv[]) {
 	}
 
 	SaveMultipleMeanQuick(betaBool,loopBeam,loopMeans,pathAllfiles);
-//	std::clock_t end = std::clock();
-//	double elapsed_secs =  double(end - begin) / CLOCKS_PER_SEC;
-//	std::cout << "TIME THE CODE TOOK:" << elapsed_secs << std::endl;
 }
 

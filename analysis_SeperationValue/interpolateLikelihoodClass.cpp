@@ -11,7 +11,7 @@ InterpolateLikelihood::InterpolateLikelihood() {
 
 InterpolateLikelihood::InterpolateLikelihood(std::string datafile) {
   std::cout << datafile.c_str() << std::endl;
-  readDataBaseFileMMapped(datafile);
+  readDataBaseFileFast(datafile);
   std::cout << "Completed Reading datafile" << std::endl;
 
   //sortVariables();
@@ -40,133 +40,6 @@ void InterpolateLikelihood::addMeasurement(double x, double y, double theta, dou
   newBatch.beta = beta;
   newBatch.mean.push_back(means);
   measurements.push_back(newBatch);
-}
-
-int InterpolateLikelihood::countLines(boost::iostreams::mapped_file mmap, const char *f) {
-  const char *l = f + mmap.size();
-
-  uintmax_t m_numLines = 0;
-  std::vector<std::string> lines;
-  while (f && f != l) {
-    if ((f = static_cast<const char *>(memchr(f, '\n', l - f)))) {
-      m_numLines++;
-    }
-    f++;
-  }
-  return m_numLines;
-}
-
-void InterpolateLikelihood::readDataBaseFileMMapped(std::string filename) {
-  std::clock_t begin = std::clock();
-
-  boost::iostreams::mapped_file mmap(
-      filename.c_str(),
-      boost::iostreams::mapped_file::readonly);
-  const char *f = mmap.const_data();
-  const char *l = f + mmap.size();
-
-  uintmax_t m_numLines = 0;
-  size_t i = 0;
-  long long int start = i;
-  long long int valueCounter = 0;
-
-  int VARIABLE_COUNT = 5;
-  long long int startCount = 0;
-  std::vector<double> xList, yList, tList, pList, bList;
-  // st
-
-  double value0, value1, value2, value3, value4, value5 = 0;
-  int chunk = 0;
-  int pixelCounter = 0;
-  std::vector<double> means;
-  // std::cout << strlen(&f[0]) << std::endl;
-
-  size_t f_size = strlen(f);
-  std::cout << f_size << std::endl;
-  std::cout << (int)f_size << std::endl;
-  measuredBatch currentBatch;
-  while (i < f_size) {
-    std::string line;
-    double value;
-    // std::cout << isspace(f[i]) << std::endl;
-    if (isspace(f[i])) {
-      char test[i - start];
-      std::strncpy(test, f + start, i - start);
-      value = atof(test);
-      start = i + 1;
-      //      std::cout << valueCounter << "    " << value << std::endl;
-
-      if (valueCounter == startCount + 0) {
-        value0 = value;
-        if (startCount > 0) {
-          betaList.push_back(value);
-          currentBatch.beta = value;
-        }
-      } else if (valueCounter == startCount + 1) {
-        value1 = value;
-        if (startCount > 0) {
-          xList.push_back(value);
-          currentBatch.x = value;
-        }
-      } else if (valueCounter == startCount + 2) {
-        value2 = value;
-        if (startCount > 0) {
-          yList.push_back(value);
-          currentBatch.y = value;
-        }
-      } else if (valueCounter == startCount + 3) {
-        value3 = value;
-        if (startCount > 0) {
-          thetaList.push_back(value);
-          currentBatch.theta = value;
-        }
-      } else if (valueCounter == startCount + 4) {
-        value4 = value;
-        if (startCount > 0) {
-          phiList.push_back(value);
-          currentBatch.phi = value;
-        }
-      } else if (valueCounter == VARIABLE_COUNT) {
-        value5 = value;
-        xList.reserve(value0 * value1 * value2 * value3 * value4);
-        yList.reserve(value0 * value1 * value2 * value3 * value4);
-        thetaList.reserve(value0 * value1 * value2 * value3 * value4);
-        phiList.reserve(value0 * value1 * value2 * value3 * value4);
-        betaList.reserve(value0 * value1 * value2 * value3 * value4);
-        measurements.reserve(value0 * value1 * value2 * value3 * value4);
-        means.reserve(value5);
-        startCount = valueCounter + 1;
-      }
-
-      if (startCount > 0 && valueCounter > startCount + VARIABLE_COUNT &&
-          valueCounter <= startCount + VARIABLE_COUNT + value5) {
-        means.push_back(value);
-        //std::cout << pixelCounter << "    " << means[pixelCounter] << "\n";
-        pixelCounter++;
-      }
-      if (startCount > 0 &&
-          valueCounter == startCount + VARIABLE_COUNT + value5) {
-        startCount = valueCounter + 2;
-        currentBatch.mean.push_back(means);
-        measurements.push_back(currentBatch);
-        //std::cout << measurements.back().mean[0].size() << std::endl;
-        currentBatch = measuredBatch();
-        means.clear();
-        means.reserve(value5);
-        pixelCounter = 0;
-      }
-      valueCounter++;
-    }
-    i++;
-  }
-  mmap.close();
-  //for (int i = 0; i < xList.size(); i++) {
-  //std::cout << xList[i] << "    ";
-  //std::cout << yList[i] << "    ";
-  //std::cout << thetaList[i] << "    ";
-  //std::cout << phiList[i] << "    ";
-  //std::cout << betaList[i] << std::endl;
-  //}
 }
 
 void InterpolateLikelihood::readDataBaseFileFast(std::string filename) {
